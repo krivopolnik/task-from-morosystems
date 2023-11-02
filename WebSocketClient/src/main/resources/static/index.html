@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat</title>
+
+  <!-- Подключение библиотеки SockJS через CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+
+  <!-- Подключение библиотеки Stomp через CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+</head>
+<body>
+<div id="chat-page">
+  <div id="username-container">
+    <input id="username-input" type="text" placeholder="Enter your nickname..." />
+    <button id="set-username">Set Nickname</button>
+  </div>
+  <div id="current-username" style="display: none;"></div>
+
+  <div id="chat-window">
+    <div id="output"></div>
+  </div>
+  <input id="message-input" type="text" placeholder="Enter your message here..." />
+  <button id="send-message">Send</button>
+</div>
+
+<script src="js/chat.js"></script>
+</body>
+</html>
