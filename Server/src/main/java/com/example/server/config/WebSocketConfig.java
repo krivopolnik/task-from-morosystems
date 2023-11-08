@@ -12,16 +12,18 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        // Регистрация эндпоинта, который клиенты будут использовать для подключения к WebSocket
-        registry.addEndpoint("/ws").setAllowedOrigins("https://localhost:8443");
-        registry.addEndpoint("/ws").setAllowedOrigins("https://localhost:8443").withSockJS();
+        // Register an endpoint that clients will use to connect to the WebSocket
+        registry.addEndpoint("/ws").setAllowedOrigins("http://localhost:8080");
+        // Register the same endpoint with SockJS fallback options for browsers that don't support WebSocket
+        registry.addEndpoint("/ws").setAllowedOrigins("http://localhost:8080").withSockJS();
     }
 
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
-        // Настройка простого брокера сообщений, который будет отправлять сообщения на клиентские подписки на указанные префиксы
+        // Set up a simple message broker to carry messages back to the client on specific topic destinations
         registry.enableSimpleBroker("/topic");
-        // Настройка префикса для фильтрации адресов назначения, которые будут обрабатываться контроллерами сообщений
+        // Configure a prefix to filter destinations that will be handled by message-handling methods (controllers)
         registry.setApplicationDestinationPrefixes("/app");
     }
 }
+

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const connectionStatus = document.getElementById('connection-status');
 
     // WebSocket setup using SockJS and Stomp
-    const socket = new SockJS('http://localhost:8080/ws');
+    const socket = new SockJS('http://localhost:8081/ws');
     const stompClient = Stomp.over(socket);
     let currentUsername = null;
 

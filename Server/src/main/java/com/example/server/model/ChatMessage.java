@@ -10,10 +10,10 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "chat_messages")
-@Getter // Генерация геттеров для всех полей
-@Setter // Генерация сеттеров для всех полей
-@NoArgsConstructor // Генерация конструктора без аргументов
-@ToString // Генерация метода toString
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
 public class ChatMessage {
 
     @Id

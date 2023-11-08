@@ -5,15 +5,14 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "system_metrics")
-@Getter // Генерация геттеров для всех полей
-@Setter // Генерация сеттеров для всех полей
-@NoArgsConstructor // Генерация конструктора без аргументов
-@ToString // Генерация метода toString
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
 public class SystemMetrics {
 
     @Id

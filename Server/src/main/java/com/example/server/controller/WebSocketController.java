@@ -17,8 +17,12 @@ public class WebSocketController {
 
     @Autowired
     private ChatService chatService;
+
     @Autowired
     private SystemMetricsService systemMetrics;
+
+    // Method that maps to the '/chat.sendMessage' endpoint and when messages are sent to this endpoint,
+    // they are broadcast to the '/topic/public'.
     @MessageMapping("/chat.sendMessage")
     @SendTo("/topic/public")
     public ChatMessage sendMessage(@Payload ChatMessage chatMessage) {
@@ -30,6 +34,8 @@ public class WebSocketController {
         }
     }
 
+    // Method that maps to the '/metrics' endpoint and broadcasts the received system metrics
+    // to the '/topic/metrics' for subscribers.
     @MessageMapping("/metrics")
     @SendTo("/topic/metrics")
     public SystemMetrics handleMetrics(@Payload SystemMetrics metrics) {
