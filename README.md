@@ -8,7 +8,7 @@ Chtěl bych prostřednictvím tohoto souboru README.md vyjádřit svou vděčnos
 
 ### Implementace SSL
 
-Bohužel, i přes mnoho pokusů a hluboký výzkum, se mi nepodařilo implementovat SSL certifikát. Veškeré kroky a úsilí, které jsem věnoval tomuto úkolu, jsem podrobně popsali v souboru `SSLImplementationAttempts.md`. Věřím, že tyto informace poslouží jako užitečný základ pro další práci v této oblasti.
+Bohužel, i přes mnoho pokusů a hluboký výzkum, se mi nepodařilo implementovat SSL certifikát. Veškeré kroky a úsilí, které jsem věnoval tomuto úkolu, jsem podrobně popsali v souboru `SSLImplementationAttempts`. Věřím, že tyto informace poslouží jako užitečný základ pro další práci v této oblasti.
 
 ### Java.io.Serializable
 
